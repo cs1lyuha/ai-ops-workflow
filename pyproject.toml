@@ -1,0 +1,14 @@
+[project]
+name = "ai-ops-workflow"
+version = "0.1.0"
+description = "Workflow AI pentru comenzi B2B primite pe e-mail: extragere, validare, rutare, aprobare umană, CRM, notificări, checkpoint"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.6"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=1.0"]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
